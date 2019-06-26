@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+   <div class="col-sm-8 " >
+     <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+       <div class="form control">
+          <label for="ingredientName"> Name</label>
+          <!-- <input type="text" id="ingredientName" class="form-control" #nameInput> -->
+          <input type="text" id="ingredientName" class="form-control" name="name" ngModel required>
+       </div>
+       <div class="form control" >
+          <label for="ingredientAmount">Amount</label>
+          <!-- <input type="number" id="ingredientAmount" class="form-control" #amountInput> -->
+          <input type="number" id="ingredientAmount" class="form-control" name="amount" ngModel required  pattern="^[1-9]+[0-9]*$" min="1">
+         </div>
+         <!-- <button type="submit" class="btn btn-success" (click)="addIngredient(nameInput,amountInput)"> ADD</button> -->
+         <button type="submit" class="btn btn-success" [disabled]="!f.valid"> {{editMode?'Update':'Add'}}</button>
+         <button  class="btn btn-danger" type="button" *ngIf="editMode" (click)="onDelete(i)">Delete</button>
+         <button  class="btn btn-primary" type="button" (click)="onClear()">Clear</button>
+     </form>
+
+   
+ 
+
+  </div>
+
+</div>

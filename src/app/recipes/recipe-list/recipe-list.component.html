@@ -1,0 +1,4 @@
+
+<!-- <app-recipe-item *ngFor="let record of recipeList" [element]="record"  (recipeItemDetail)="showRecipeItemDetail(record)"></app-recipe-item> -->
+
+<app-recipe-item *ngFor="let record of recipeList ; let i=index" [index]="i" [element]="record" ></app-recipe-item>

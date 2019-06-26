@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col-sm-12">
+    <form (ngSubmit)="submit(f)" #f="ngForm">;
+      <div class="form-group">
+        <label for="email">Mail</label>
+        <input type="email" name="email" id="email" class="form-control" ngModel>
+      </div>
+      <div class="form-group">
+        <label for="password">Passwrod</label>
+        <input type="password" name="password" id="password" class="form-control" ngModel>
+      </div>
+      <button type="submit" class="btn btn-primary">SignUp</button>
+    </form>
+  </div>
+</div>
