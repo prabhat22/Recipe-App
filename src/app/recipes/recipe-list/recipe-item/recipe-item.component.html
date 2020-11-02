@@ -1,0 +1,33 @@
+<!-- <div class="row">
+  <div class="col-sm-6">
+      <a   style="cursor:pointer;" class="list-group-item clearfix"  (click)="showRecipeDetail()">
+          <div>
+              <h4 class="list-group-item-heading">{{element.recipeName}}</h4>
+               <p class="list-group-item-text">{{element.recipeDesc}}</p>
+               <img src="{{element.recipeImgPath}}" alt="img" class="pull-right img-responsive " style="height:50px">
+            </div>
+       </a>
+  </div>
+</div> -->
+<!-- <div class="row">
+  <div class="col-sm-6">
+      <a  [routerLink]="[index]" style="cursor:pointer;" class="list-group-item clearfix"  (click)="showRecipeDetail()">
+          <div>
+              <h4 class="list-group-item-heading">{{element.recipeName}}</h4>
+               <p class="list-group-item-text">{{element.recipeDesc}}</p>
+               <img src="{{element.recipeImgPath}}" alt="img" class="pull-right img-responsive " style="height:50px">
+            </div>
+       </a>
+  </div>
+</div> -->
+<div class="row">
+    <div class="col-sm-6">
+        <a  [routerLink]="[index]" routerLinkActive="active" style="cursor:pointer;" class="list-group-item clearfix">
+            <div>
+                <h4 class="list-group-item-heading">{{element.recipeName}}</h4>
+                 <p class="list-group-item-text">{{element.recipeDesc}}</p>
+                 <img src="{{element.recipeImgPath}}" alt="img" class="pull-right img-responsive " style="height:50px">
+              </div>
+         </a>
+    </div>
+  </div>

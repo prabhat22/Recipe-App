@@ -1,0 +1,34 @@
+<div class="row">
+  <div class="col-sm-12">
+    <img src="{{recipe.recipeImgPath}}" alt="image">
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-12">
+    <h1>{{recipe.recipeName}}</h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-12" appDropdown>
+    <button class="btn btn-primary dropdown-toggle">Manage <span class="caret"  ></span></button>
+    <ul  class="dropdown-menu"   >
+      <li><a  style="cursor:pointer;" (click)="shoppingList()" >TO shopping List</a></li>
+      <li><a (click)="edit()" style="cursor:pointer;" >edit</a></li>
+      <li><a  style="cursor:pointer;" (click)="deleteRecipe()" >delete</a></li>
+    </ul>
+  </div>
+</div>
+<div class="row">
+    <div class="col-sm-12">
+      <h3>{{recipe.recipeDesc}}</h3>
+    </div>
+  </div>
+<div class="row">
+  <div class="col-sm-12">
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let record of recipe.ingredients">
+      {{record.name}}({{record.amount}})
+    </li>
+  </ul>
+  </div>
+</div>
